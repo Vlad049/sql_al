@@ -22,7 +22,7 @@ def add_employee():
         if request.method == "POST":
             name = request.form.get("name")
             position_id = request.form.get("position_id")
-            employee = employee(name=name, position_id=position_id)
+            employee = Employee(name=name, position_id=position_id)
             session.add(employee)
             session.commit()
             return redirect("/")
@@ -35,7 +35,7 @@ def add_position():
     if request.method == "POST":
         with Session() as session:
             name = request.form.get("name")
-            position = position(name=name)
+            position = Position(name=name)
             session.add(position)
             session.commit()
             return redirect("/")
