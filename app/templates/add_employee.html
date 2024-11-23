@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
 {% block title %}
-Додати студента
+Додати працівника
 {% endblock title %}
 
 {% block center %}
 <form action="{{ url_for('add_employee') }}" method="post">
     <div class="form-position">
-        <label>Ім'я студента</label>
+        <label>Ім'я працівника</label>
         <input type="text" name="name" class="form-control">
     </div>
     <div class="form-position">
@@ -17,6 +17,6 @@
             {% endfor %}
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Додати студента</button>
+    <button type="submit" class="btn btn-primary">Додати працівника</button>
 </form>
 {% endblock center %}

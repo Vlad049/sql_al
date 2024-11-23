@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
 {% block title %}
-Додати групу
+Додати посаду
 {% endblock title %}
 
 {% block center %}
 <form action="{{ url_for('add_position') }}" method="post">
     <div class="form-position">
-        <label>Введіть назву групи</label>
+        <label>Введіть посаду</label>
         <input type="text" name="name" class="form-control">
     </div>
     <button type="submit" class="btn btn-success">Додати</button>
