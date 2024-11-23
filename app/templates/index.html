@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block center %}
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <td>№</td>
+            <td>Ім'я</td>
+            <td>Група</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.position.name }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock center %}
